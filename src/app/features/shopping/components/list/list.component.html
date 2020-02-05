@@ -1,0 +1,10 @@
+<ul class="list-unstyled">
+  <li class="alert alert-info"
+      *ngFor="let item of model">
+    <span>{{item.description }}</span>
+    <button class="btn btn-sm btn-danger ml-2"
+            [disabled]="item.isTemporary"
+            (click)="markPurchased()"
+            *ngIf="!item.purchased">X</button>
+  </li>
+</ul>

@@ -1,1 +1,12 @@
 <p>dashboard works!</p>
+<header>
+  <h3>Dashboard</h3>
+</header>
+<section>
+  <div class="alert alert-info">
+    <h5>Todos</h5>
+    <p>You have {{ (model$ | async)?.totalTodos }} Todos. (
+      {{ (model$ | async)?.completeTodos }} are completed,
+      {{ (model$ | async)?.incompleteTodos }} are incomplete)</p>
+  </div>
+</section>
